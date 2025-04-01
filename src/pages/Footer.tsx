@@ -1,12 +1,12 @@
 
 const Footer = () => {
-    return(
-        <>
-              <footer className="bg-[#181A1F] text-white pt-16 pb-8 px-4 md:px-16 border-t border-gray-800">
+  return (
+    <>
+      <footer className="bg-[#181A1F] text-white pt-16 pb-8 px-4 md:px-16 border-t border-gray-800">
         <div className="max-w-7xl mx-auto">
-          {/* Footer Top Section */}
+
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
-            {/* Community Column */}
+
             <div>
               <h3 className="font-medium mb-6">Community</h3>
               <div className="grid grid-cols-4 gap-4 mb-4">
@@ -56,8 +56,8 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            
-            {/* About Us Column */}
+
+
             <div>
               <h3 className="font-medium mb-6">About Us</h3>
               <ul className="space-y-3 text-sm text-gray-400">
@@ -78,8 +78,8 @@ const Footer = () => {
                 <li><a href="#" className="hover:text-yellow-300">Desktop Application</a></li>
               </ul>
             </div>
-            
-            {/* Products Column */}
+
+
             <div>
               <h3 className="font-medium mb-6">Products</h3>
               <ul className="space-y-3 text-sm text-gray-400">
@@ -99,8 +99,8 @@ const Footer = () => {
                 <li><a href="#" className="hover:text-yellow-300">Charity</a></li>
               </ul>
             </div>
-            
-            {/* Business Column */}
+
+
             <div>
               <h3 className="font-medium mb-6">Business</h3>
               <ul className="space-y-3 text-sm text-gray-400">
@@ -137,8 +137,8 @@ const Footer = () => {
 
               </ul>
             </div>
-            
-            {/* Service Column */}
+
+
             <div>
               <h3 className="font-medium mb-6">Service</h3>
               <ul className="space-y-3 text-sm text-gray-400">
@@ -150,7 +150,7 @@ const Footer = () => {
                 <li><a href="#" className="hover:text-yellow-300">Trading Insight</a></li>
                 <li><a href="#" className="hover:text-yellow-300">Proof of Reserves</a></li>
               </ul>
-              
+
               <h3 className="font-medium mb-6 mt-8">Support</h3>
               <ul className="space-y-3 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-yellow-300">24/7 Chat Support</a></li>
@@ -165,8 +165,8 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          
-          {/* Footer Bottom Section */}
+
+
           <div className="flex flex-col md:flex-row justify-center items-center pt-8 border-t border-gray-800">
             <div className="flex flex-col md:flex-row items-center justify-center mb-6 md:mb-0 space-y-3 md:space-y-0">
               <div className="text-sm text-gray-400 md:mr-8 text-center">
@@ -179,9 +179,9 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-        
-        </>
-    )
+
+    </>
+  )
 
 }
 

@@ -15,29 +15,30 @@ interface HeaderProps {
 
 
 const Header: React.FC<HeaderProps> = ({
-    hoveredMenu,
-    setHoveredMenu,
-    hoveredSubmenu,
-    setHoveredSubmenu,
-    showSearch,
-    setShowSearch,
-    searchQuery,
-    setSearchQuery
-  }) => {
+  hoveredMenu,
+  setHoveredMenu,
+  hoveredSubmenu,
+  setHoveredSubmenu,
+  showSearch,
+  setShowSearch,
+  searchQuery,
+  setSearchQuery
+}) => {
 
-    return (
-        <>
-                  <header className="flex items-center justify-between px-6 py-2 fixed top-0 left-0 right-0 z-50 bg-[#181A1F]">
+  return (
+    <>
+
+      <header className="flex items-center justify-between px-6 py-2 fixed top-0 left-0 right-0 z-50 bg-[#181A1F]">
         <div className="flex items-center">
-          <img src={BinaryIcon} alt="Binance" className="h-12 mr-8 text-[#f0b90b] cursor-pointer" />
+          <img src={BinaryIcon} alt="Binance" className="h-14 mr-8 text-[#f0b90b] cursor-pointer" />
 
           <nav className="hidden md:flex">
             <ul className="flex space-x-6">
               <li><a href="#" className="text-sm hover:text-[#f0b90b]">Buy Crypto</a></li>
               <li><a href="#" className="text-sm hover:text-[#f0b90b]">Markets</a></li>
               <li className="relative">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="text-sm hover:text-[#f0b90b] flex items-center"
                   onMouseEnter={() => setHoveredMenu('trade')}
                   onMouseLeave={() => setHoveredMenu(null)}
@@ -46,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({
                 </a>
                 <AnimatePresence>
                   {hoveredMenu === 'trade' && (
-                    <motion.div 
+                    <motion.div
                       className="absolute top-full left-0 mt-1 bg-[#1e2329] rounded-lg shadow-lg p-4 w-[600px] grid grid-cols-2 gap-4"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -58,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({
                       <div>
                         <h3 className="text-gray-400 text-xs mb-3 uppercase">Basic</h3>
                         <ul className="space-y-2">
-                          <li 
+                          <li
                             className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                             onMouseEnter={() => setHoveredSubmenu('spot')}
                             onMouseLeave={() => setHoveredSubmenu(null)}
@@ -88,7 +89,7 @@ const Header: React.FC<HeaderProps> = ({
                               </motion.div>
                             )}
                           </li>
-                          <li 
+                          <li
                             className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                             onMouseEnter={() => setHoveredSubmenu('margin')}
                             onMouseLeave={() => setHoveredSubmenu(null)}
@@ -116,7 +117,7 @@ const Header: React.FC<HeaderProps> = ({
                               </motion.div>
                             )}
                           </li>
-                          <li 
+                          <li
                             className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                             onMouseEnter={() => setHoveredSubmenu('p2p')}
                             onMouseLeave={() => setHoveredSubmenu(null)}
@@ -147,7 +148,7 @@ const Header: React.FC<HeaderProps> = ({
                               </motion.div>
                             )}
                           </li>
-                          <li 
+                          <li
                             className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                             onMouseEnter={() => setHoveredSubmenu('convert')}
                             onMouseLeave={() => setHoveredSubmenu(null)}
@@ -183,7 +184,7 @@ const Header: React.FC<HeaderProps> = ({
                       <div>
                         <h3 className="text-gray-400 text-xs mb-3 uppercase">Advanced</h3>
                         <ul className="space-y-2">
-                          <li 
+                          <li
                             className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                             onMouseEnter={() => setHoveredSubmenu('tradingBots')}
                             onMouseLeave={() => setHoveredSubmenu(null)}
@@ -213,7 +214,7 @@ const Header: React.FC<HeaderProps> = ({
                               </motion.div>
                             )}
                           </li>
-                          <li 
+                          <li
                             className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                             onMouseEnter={() => setHoveredSubmenu('copyTrading')}
                             onMouseLeave={() => setHoveredSubmenu(null)}
@@ -242,7 +243,7 @@ const Header: React.FC<HeaderProps> = ({
                               </motion.div>
                             )}
                           </li>
-                          <li 
+                          <li
                             className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                             onMouseEnter={() => setHoveredSubmenu('apis')}
                             onMouseLeave={() => setHoveredSubmenu(null)}
@@ -279,8 +280,8 @@ const Header: React.FC<HeaderProps> = ({
                 </AnimatePresence>
               </li>
               <li className="relative">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="text-sm hover:text-[#f0b90b] flex items-center"
                   onMouseEnter={() => setHoveredMenu('futures')}
                   onMouseLeave={() => setHoveredMenu(null)}
@@ -289,7 +290,7 @@ const Header: React.FC<HeaderProps> = ({
                 </a>
                 <AnimatePresence>
                   {hoveredMenu === 'futures' && (
-                    <motion.div 
+                    <motion.div
                       className="absolute top-full left-0 mt-1 bg-[#1e2329] rounded-lg shadow-lg p-4 w-[500px]"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -299,7 +300,7 @@ const Header: React.FC<HeaderProps> = ({
                       onMouseLeave={() => setHoveredMenu(null)}
                     >
                       <ul className="space-y-4">
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('usdtFutures')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -325,7 +326,7 @@ const Header: React.FC<HeaderProps> = ({
                             </motion.div>
                           )}
                         </li>
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('coinFutures')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -351,7 +352,7 @@ const Header: React.FC<HeaderProps> = ({
                             </motion.div>
                           )}
                         </li>
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('options')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -383,8 +384,8 @@ const Header: React.FC<HeaderProps> = ({
                 </AnimatePresence>
               </li>
               <li className="relative">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="text-sm hover:text-[#f0b90b] flex items-center"
                   onMouseEnter={() => setHoveredMenu('earn')}
                   onMouseLeave={() => setHoveredMenu(null)}
@@ -393,7 +394,7 @@ const Header: React.FC<HeaderProps> = ({
                 </a>
                 <AnimatePresence>
                   {hoveredMenu === 'earn' && (
-                    <motion.div 
+                    <motion.div
                       className="absolute top-full left-0 mt-1 bg-[#1e2329] rounded-lg shadow-lg p-4 w-[500px]"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -403,7 +404,7 @@ const Header: React.FC<HeaderProps> = ({
                       onMouseLeave={() => setHoveredMenu(null)}
                     >
                       <ul className="space-y-4">
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('overview')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -433,7 +434,7 @@ const Header: React.FC<HeaderProps> = ({
                             </motion.div>
                           )}
                         </li>
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('simpleEarn')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -461,7 +462,7 @@ const Header: React.FC<HeaderProps> = ({
                             </motion.div>
                           )}
                         </li>
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('advancedEarn')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -489,7 +490,7 @@ const Header: React.FC<HeaderProps> = ({
                             </motion.div>
                           )}
                         </li>
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('loans')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -525,8 +526,8 @@ const Header: React.FC<HeaderProps> = ({
                 </AnimatePresence>
               </li>
               <li className="relative">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="text-sm hover:text-[#f0b90b] flex items-center"
                   onMouseEnter={() => setHoveredMenu('square')}
                   onMouseLeave={() => setHoveredMenu(null)}
@@ -535,7 +536,7 @@ const Header: React.FC<HeaderProps> = ({
                 </a>
                 <AnimatePresence>
                   {hoveredMenu === 'square' && (
-                    <motion.div 
+                    <motion.div
                       className="absolute top-full left-0 mt-1 bg-[#1e2329] rounded-lg shadow-lg p-4 w-[500px]"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -545,7 +546,7 @@ const Header: React.FC<HeaderProps> = ({
                       onMouseLeave={() => setHoveredMenu(null)}
                     >
                       <ul className="space-y-4">
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('squareMain')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -573,7 +574,7 @@ const Header: React.FC<HeaderProps> = ({
                             </motion.div>
                           )}
                         </li>
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('academy')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -602,7 +603,7 @@ const Header: React.FC<HeaderProps> = ({
                             </motion.div>
                           )}
                         </li>
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('blog')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -631,7 +632,7 @@ const Header: React.FC<HeaderProps> = ({
                             </motion.div>
                           )}
                         </li>
-                        <li 
+                        <li
                           className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                           onMouseEnter={() => setHoveredSubmenu('research')}
                           onMouseLeave={() => setHoveredSubmenu(null)}
@@ -666,8 +667,8 @@ const Header: React.FC<HeaderProps> = ({
                 </AnimatePresence>
               </li>
               <li className="relative">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="text-sm hover:text-[#f0b90b] flex items-center"
                   onMouseEnter={() => setHoveredMenu('more')}
                   onMouseLeave={() => setHoveredMenu(null)}
@@ -676,7 +677,7 @@ const Header: React.FC<HeaderProps> = ({
                 </a>
                 <AnimatePresence>
                   {hoveredMenu === 'more' && (
-                    <motion.div 
+                    <motion.div
                       className="absolute top-full right-0 mt-1 bg-[#1e2329] rounded-lg shadow-lg p-4 w-[600px]"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -688,7 +689,7 @@ const Header: React.FC<HeaderProps> = ({
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <ul className="space-y-4">
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('vip')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -716,7 +717,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('affiliate')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -747,7 +748,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('referral')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -778,7 +779,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('launchpool')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -807,7 +808,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('megadrop')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -837,7 +838,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('miningPool')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -870,7 +871,7 @@ const Header: React.FC<HeaderProps> = ({
                         </div>
                         <div>
                           <ul className="space-y-4">
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('pay')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -899,7 +900,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('nft')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -930,7 +931,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('fanToken')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -958,7 +959,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('wallet')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -987,7 +988,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('bnbChain')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -1015,7 +1016,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </motion.div>
                               )}
                             </li>
-                            <li 
+                            <li
                               className="flex items-center justify-between p-2 hover:bg-[#2b3139] rounded-md cursor-pointer"
                               onMouseEnter={() => setHoveredSubmenu('charity')}
                               onMouseLeave={() => setHoveredSubmenu(null)}
@@ -1052,161 +1053,161 @@ const Header: React.FC<HeaderProps> = ({
               </li>
             </ul>
           </nav>
-          
+
         </div>
-        
+
         <div className="flex items-center space-x-4">
-        <button 
-              className="text-white cursor-pointer hover:text-gray-300"
-              onClick={() => setShowSearch(!showSearch)}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
-            <AnimatePresence>
-              {showSearch && (
-                <motion.div 
-                  className="absolute top-10 right-70 w-[400px] bg-[#1e2329] rounded-lg shadow-lg p-4"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="flex items-center bg-[#2A3039] rounded-md px-3 py-2 flex-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                      </svg>
-                      <input 
-                        type="text" 
-                        placeholder="Search" 
-                        className="bg-transparent border-none outline-none text-white w-full"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                      />
-                    </div>
-                    <button 
-                      className="ml-2 text-gray-400 hover:text-white"
-                      onClick={() => setShowSearch(false)}
-                    >
-                      Cancel
-                    </button>
+          <button
+            className="text-white cursor-pointer hover:text-gray-300"
+            onClick={() => setShowSearch(!showSearch)}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <AnimatePresence>
+            {showSearch && (
+              <motion.div
+                className="absolute top-10 right-70 w-[400px] bg-[#1e2329] rounded-lg shadow-lg p-4"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center bg-[#2A3039] rounded-md px-3 py-2 flex-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      className="bg-transparent border-none outline-none text-white w-full"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
                   </div>
-                  
-                  <div>
-                    <h3 className="text-lg font-medium mb-2">Hot Trading</h3>
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
-                        <div className="flex items-center">
-                          <span className="text-yellow-500 mr-3">1</span>
-                          <div className="w-6 h-6 bg-[#2b3139] rounded-full flex items-center justify-center mr-2">
-                            <span className="text-xs">G</span>
-                          </div>
-                          <span>GUN/USDT</span>
+                  <button
+                    className="ml-2 text-gray-400 hover:text-white"
+                    onClick={() => setShowSearch(false)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-medium mb-2">Hot Trading</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
+                      <div className="flex items-center">
+                        <span className="text-yellow-500 mr-3">1</span>
+                        <div className="w-6 h-6 bg-[#2b3139] rounded-full flex items-center justify-center mr-2">
+                          <span className="text-xs">G</span>
                         </div>
-                        <div className="flex flex-col items-end">
-                          <span>$0.06526</span>
-                          <span className="text-red-500 text-sm">-40.10%</span>
-                        </div>
+                        <span>GUN/USDT</span>
                       </div>
-                      
-                      <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
-                        <div className="flex items-center">
-                          <span className="text-yellow-500 mr-3">2</span>
-                          <div className="w-6 h-6 bg-[#f3ba2f] rounded-full flex items-center justify-center mr-2">
-                            <span className="text-xs text-black">₿</span>
-                          </div>
-                          <span>BTC/USDT</span>
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <span>$83,648.32</span>
-                          <span className="text-green-500 text-sm">+2.27%</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
-                        <div className="flex items-center">
-                          <span className="text-yellow-500 mr-3">3</span>
-                          <div className="w-6 h-6 bg-[#f3ba2f] rounded-full flex items-center justify-center mr-2">
-                            <span className="text-xs text-black">B</span>
-                          </div>
-                          <span>BNB/USDT</span>
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <span>$613.70</span>
-                          <span className="text-green-500 text-sm">+3.13%</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
-                        <div className="flex items-center">
-                          <span className="text-gray-500 mr-3">4</span>
-                          <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mr-2">
-                            <span className="text-xs text-white">S</span>
-                          </div>
-                          <span>SOL/USDT</span>
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <span>$127.54</span>
-                          <span className="text-green-500 text-sm">+2.97%</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
-                        <div className="flex items-center">
-                          <span className="text-gray-500 mr-3">5</span>
-                          <div className="w-6 h-6 bg-[#23292f] rounded-full flex items-center justify-center mr-2">
-                            <span className="text-xs text-white">X</span>
-                          </div>
-                          <span>XRP/USDT</span>
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <span>$2.15</span>
-                          <span className="text-green-500 text-sm">+3.91%</span>
-                        </div>
+                      <div className="flex flex-col items-end">
+                        <span>$0.06526</span>
+                        <span className="text-red-500 text-sm">-40.10%</span>
                       </div>
                     </div>
-                    
-                    <h3 className="text-lg font-medium mt-6 mb-2">Earn</h3>
-                    <div className="flex space-x-4">
-                      <div className="bg-[#2A3039] p-4 rounded-lg cursor-pointer hover:bg-[#2b3139]">
-                        <div className="flex items-center mb-2">
-                          <div className="w-8 h-8 bg-[#26a17b] rounded-full flex items-center justify-center mr-2">
-                            <span className="text-white text-xs">$</span>
-                          </div>
-                          <span>USDT</span>
+
+                    <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
+                      <div className="flex items-center">
+                        <span className="text-yellow-500 mr-3">2</span>
+                        <div className="w-6 h-6 bg-[#f3ba2f] rounded-full flex items-center justify-center mr-2">
+                          <span className="text-xs text-black">₿</span>
                         </div>
-                        <div className="text-sm text-gray-400">Max APR</div>
-                        <div className="text-green-500 text-xl">600.00%</div>
+                        <span>BTC/USDT</span>
                       </div>
-                      
-                      <div className="bg-[#2A3039] p-4 rounded-lg cursor-pointer hover:bg-[#2b3139]">
-                        <div className="flex items-center mb-2">
-                          <div className="w-8 h-8 bg-[#26a17b] rounded-full flex items-center justify-center mr-2">
-                            <span className="text-white text-xs">$</span>
-                          </div>
-                          <span>USDT</span>
-                        </div>
-                        <div className="text-sm text-gray-400">Max APR</div>
-                        <div className="text-green-500 text-xl">349.97%</div>
+                      <div className="flex flex-col items-end">
+                        <span>$83,648.32</span>
+                        <span className="text-green-500 text-sm">+2.27%</span>
                       </div>
-                      
-                      <div className="bg-[#2A3039] p-4 rounded-lg cursor-pointer hover:bg-[#2b3139]">
-                        <div className="flex items-center mb-2">
-                          <div className="w-8 h-8 bg-[#f3ba2f] rounded-full flex items-center justify-center mr-2">
-                            <span className="text-black text-xs">₿</span>
-                          </div>
-                          <span>BTC</span>
+                    </div>
+
+                    <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
+                      <div className="flex items-center">
+                        <span className="text-yellow-500 mr-3">3</span>
+                        <div className="w-6 h-6 bg-[#f3ba2f] rounded-full flex items-center justify-center mr-2">
+                          <span className="text-xs text-black">B</span>
                         </div>
-                        <div className="text-sm text-gray-400">Max APR</div>
-                        <div className="text-green-500 text-xl">346.50%</div>
+                        <span>BNB/USDT</span>
+                      </div>
+                      <div className="flex flex-col items-end">
+                        <span>$613.70</span>
+                        <span className="text-green-500 text-sm">+3.13%</span>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
+                      <div className="flex items-center">
+                        <span className="text-gray-500 mr-3">4</span>
+                        <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mr-2">
+                          <span className="text-xs text-white">S</span>
+                        </div>
+                        <span>SOL/USDT</span>
+                      </div>
+                      <div className="flex flex-col items-end">
+                        <span>$127.54</span>
+                        <span className="text-green-500 text-sm">+2.97%</span>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-between items-center p-2 hover:bg-[#2b3139] rounded-md cursor-pointer">
+                      <div className="flex items-center">
+                        <span className="text-gray-500 mr-3">5</span>
+                        <div className="w-6 h-6 bg-[#23292f] rounded-full flex items-center justify-center mr-2">
+                          <span className="text-xs text-white">X</span>
+                        </div>
+                        <span>XRP/USDT</span>
+                      </div>
+                      <div className="flex flex-col items-end">
+                        <span>$2.15</span>
+                        <span className="text-green-500 text-sm">+3.91%</span>
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+
+                  <h3 className="text-lg font-medium mt-6 mb-2">Earn</h3>
+                  <div className="flex space-x-4">
+                    <div className="bg-[#2A3039] p-4 rounded-lg cursor-pointer hover:bg-[#2b3139]">
+                      <div className="flex items-center mb-2">
+                        <div className="w-8 h-8 bg-[#26a17b] rounded-full flex items-center justify-center mr-2">
+                          <span className="text-white text-xs">$</span>
+                        </div>
+                        <span>USDT</span>
+                      </div>
+                      <div className="text-sm text-gray-400">Max APR</div>
+                      <div className="text-green-500 text-xl">600.00%</div>
+                    </div>
+
+                    <div className="bg-[#2A3039] p-4 rounded-lg cursor-pointer hover:bg-[#2b3139]">
+                      <div className="flex items-center mb-2">
+                        <div className="w-8 h-8 bg-[#26a17b] rounded-full flex items-center justify-center mr-2">
+                          <span className="text-white text-xs">$</span>
+                        </div>
+                        <span>USDT</span>
+                      </div>
+                      <div className="text-sm text-gray-400">Max APR</div>
+                      <div className="text-green-500 text-xl">349.97%</div>
+                    </div>
+
+                    <div className="bg-[#2A3039] p-4 rounded-lg cursor-pointer hover:bg-[#2b3139]">
+                      <div className="flex items-center mb-2">
+                        <div className="w-8 h-8 bg-[#f3ba2f] rounded-full flex items-center justify-center mr-2">
+                          <span className="text-black text-xs">₿</span>
+                        </div>
+                        <span>BTC</span>
+                      </div>
+                      <div className="text-sm text-gray-400">Max APR</div>
+                      <div className="text-green-500 text-xl">346.50%</div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <a href="#" className="text-sm bg-[#2A3039] text-gray-300 hover:text-white px-4 py-1 rounded-md cursor-pointer">Log In</a>
           <a href="#" className="text-sm bg-[#f0b90b] text-black px-4 py-1 rounded-md hover:bg-[#f0b90b]/90 cursor-pointer">Sign Up</a>
           <button className="text-white cursor-pointer hover:text-gray-300">
@@ -1221,8 +1222,8 @@ const Header: React.FC<HeaderProps> = ({
           </button>
         </div>
       </header>
-        </>
-    )
+    </>
+  )
 }
 
 

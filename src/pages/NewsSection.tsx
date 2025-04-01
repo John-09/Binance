@@ -9,7 +9,7 @@ const NewsSection: React.FC = () => {
           View All News <span className="ml-1">›</span>
         </a>
       </div>
-      
+
       <div>
         <div className="py-2">
           <a href="#" className="hover:text-[#858F9C] cursor-pointer">
