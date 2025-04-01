@@ -1,10 +1,10 @@
-
+import FirstPage from "./pages/FirstPage"
 
 function App() {
 
   return (
     <>
-      <div>Ji</div>
+      <FirstPage />
     </>
   )
 }
