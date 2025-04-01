@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 // import {Google} from 'lucide-react'
-import QR from '../assets/qr-code.png'
+// import QR from '../assets/qr-code.png'
 import macos from '../assets/apple-icon binance.png'
 import Google from '../assets/icons8-google-48.png'
 import Footer from './Footer';
